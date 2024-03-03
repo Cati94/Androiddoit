@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>MainActivity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">happybirthday</span>
+
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">activity</span><span class="s2">.</span><span class="s1">ComponentActivity</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">activity</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">setContent</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">foundation</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">Arrangement</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">foundation</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">Column</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">foundation</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">fillMaxSize</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">foundation</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">padding</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">material3</span><span class="s2">.</span><span class="s1">MaterialTheme</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">material3</span><span class="s2">.</span><span class="s1">Surface</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">material3</span><span class="s2">.</span><span class="s1">Text</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">runtime</span><span class="s2">.</span><span class="s1">Composable</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">Alignment</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">Modifier</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">style</span><span class="s2">.</span><span class="s1">TextAlign</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">tooling</span><span class="s2">.</span><span class="s1">preview</span><span class="s2">.</span><span class="s1">Preview</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">unit</span><span class="s2">.</span><span class="s1">dp</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">unit</span><span class="s2">.</span><span class="s1">sp</span>
+<span class="s1">import com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">happybirthday</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">theme</span><span class="s2">.</span><span class="s1">HappyBirthdayTheme</span>
+
+<span class="s0">class </span><span class="s1">MainActivity : ComponentActivity</span><span class="s2">() {</span>
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState: Bundle?</span><span class="s2">) {</span>
+        <span class="s0">super</span><span class="s2">.</span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState</span><span class="s2">)</span>
+        <span class="s1">setContent </span><span class="s2">{</span>
+            <span class="s1">HappyBirthdayTheme </span><span class="s2">{</span>
+                <span class="s3">// A surface container using the 'background' color from the theme</span>
+                <span class="s1">Surface</span><span class="s2">(</span>
+                    <span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">fillMaxSize</span><span class="s2">(),</span>
+                    <span class="s1">color </span><span class="s2">= </span><span class="s1">MaterialTheme</span><span class="s2">.</span><span class="s1">colorScheme</span><span class="s2">.</span><span class="s1">background</span>
+                <span class="s2">) {</span>
+                    <span class="s1">GreetingText</span><span class="s2">(</span>
+                        <span class="s1">message </span><span class="s2">= </span><span class="s4">&quot;Happy Birthday Sam!&quot;</span><span class="s2">,</span>
+                        <span class="s1">from </span><span class="s2">= </span><span class="s4">&quot;From Emma&quot;</span><span class="s2">,</span>
+                        <span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">padding</span><span class="s2">(</span><span class="s5">8</span><span class="s2">.</span><span class="s1">dp</span><span class="s2">)</span>
+                    <span class="s2">)</span>
+                <span class="s2">}</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s1">@Composable</span>
+<span class="s0">fun </span><span class="s1">GreetingText</span><span class="s2">(</span><span class="s1">message: String</span><span class="s2">, </span><span class="s1">from: String</span><span class="s2">, </span><span class="s1">modifier: Modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">) {</span>
+    <span class="s1">Column</span><span class="s2">(</span>
+        <span class="s1">verticalArrangement </span><span class="s2">= </span><span class="s1">Arrangement</span><span class="s2">.</span><span class="s1">Center</span><span class="s2">,</span>
+        <span class="s1">modifier </span><span class="s2">= </span><span class="s1">modifier</span>
+    <span class="s2">) {</span>
+
+        <span class="s1">Text</span><span class="s2">(</span>
+            <span class="s1">text </span><span class="s2">= </span><span class="s1">message</span><span class="s2">,</span>
+            <span class="s1">FontSize </span><span class="s2">= </span><span class="s5">100</span><span class="s2">.</span><span class="s1">sp</span><span class="s2">,</span>
+            <span class="s1">lineHeight </span><span class="s2">= </span><span class="s5">116</span><span class="s2">.</span><span class="s1">sp</span><span class="s2">,</span>
+            <span class="s1">textAlign </span><span class="s2">= </span><span class="s1">TextAlign</span><span class="s2">.</span><span class="s1">Center</span>
+        <span class="s2">)</span>
+        <span class="s1">Text</span><span class="s2">(</span>
+            <span class="s1">text </span><span class="s2">= </span><span class="s1">from</span><span class="s2">,</span>
+            <span class="s1">FontSize </span><span class="s2">= </span><span class="s5">36</span><span class="s2">.</span><span class="s1">sp</span><span class="s2">,</span>
+            <span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span>
+                <span class="s2">.</span><span class="s1">padding</span><span class="s2">(</span><span class="s5">16</span><span class="s2">.</span><span class="s1">dp</span><span class="s2">)</span>
+                <span class="s2">.</span><span class="s1">align</span><span class="s2">(</span><span class="s1">alignment </span><span class="s2">= </span><span class="s1">Alignment</span><span class="s2">.</span><span class="s1">End</span><span class="s2">)</span>
+        <span class="s2">)</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+
+
+<span class="s1">@Preview</span><span class="s2">(</span><span class="s1">showBackground </span><span class="s2">= </span><span class="s0">true</span><span class="s2">)</span>
+<span class="s1">@Composable</span>
+<span class="s0">fun </span><span class="s1">BirthdayCardPreview</span><span class="s2">() {</span>
+    <span class="s1">HappyBirthdayTheme </span><span class="s2">{</span>
+        <span class="s1">GreetingText</span><span class="s2">(</span><span class="s1">message </span><span class="s2">= </span><span class="s4">&quot;Happy Birthday Sam!&quot;</span><span class="s2">, </span><span class="s1">from </span><span class="s2">= </span><span class="s4">&quot;From Emma&quot;</span><span class="s2">)</span>
+    <span class="s2">}</span>
+
+
+<span class="s2">}</span></pre>
+</body>
+</html>
