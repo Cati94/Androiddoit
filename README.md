@@ -2,6 +2,13 @@
 
 Mini aplicações Android desenvolvidas em **Kotlin**, como parte do meu processo de aprendizagem em desenvolvimento móvel.
 
+
+
+![Ilustração](https://github.com/Cati94/Androiddoit/blob/main/Android.png)
+
+
+
+
 Este repositório agrega pequenos projetos criados com o Android Studio para praticar:
 
 * Layouts e componentes visuais (TextView, ImageView, Button)
